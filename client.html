@@ -46,7 +46,8 @@
 
         socket.on('login', function(){
             var username = prompt('What username would you like to use?');
-            socket.emit('login', username);
+            var socketObj = {name: username, age:20};
+            socket.emit('login', socketObj);
         });
 
         var inputElement = document.getElementById('input');
